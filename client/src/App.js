@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import Navigation from "./components/Navigation";
+import { Container } from "react-bootstrap"
 
 const App = () => {
   return (
-    <>
-    Hello World
-    </>
+    <Container fluid id="nav">
+      <Navigation />
+    </Container>
   );
-}
+};
 
 export default App;
