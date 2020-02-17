@@ -1,20 +1,50 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+#nav-carousel {
+  position: relative;
+}
+
 #nav {
-  background-color: #3f647e;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  position: absolute;
+  z-index: 10;
 }
 
 #logo {
-  height: 32px;
+  height: 40px;
+}
+
+.container-fluid{
+  padding: 0;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: whitesmoke;
+  color: black;
   padding-right: 40px;
 }
 .navbar-light .navbar-nav .nav-link:hover {
   color: white;
-  opacity: 0.6;
+}
+
+.carousel { 
+  position: absolute;
+  top: 0;
+}
+.carousel-item {
+  height: 60vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#carousel-cards {
+  position: absolute;
+  top: 40vh;
+  z-index: 10;
+}
+
+#carousel-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 30px;
+  padding: 15px;
 }
