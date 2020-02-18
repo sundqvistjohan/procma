@@ -1,12 +1,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-#nav-carousel {
-  position: relative;
-}
-
 #nav {
-  position: absolute;
-  z-index: 10;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 #logo {
@@ -45,7 +42,9 @@
   padding: 15px;
 }
 
-#news {
+#nyheter {
+  padding-top: 60px;
   top: 660px;
   position: absolute;
+  margin-left: 100px;
 }

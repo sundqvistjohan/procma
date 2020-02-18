@@ -7,7 +7,6 @@ const Navigation = () => {
   return (
     <Container fluid id="nav">
       <Navbar>
-        <Row>
         <Col>
           <Navbar.Brand href="#">
             <img src={ProcmaLogo} alt="logo" id="logo" />
@@ -18,17 +17,15 @@ const Navigation = () => {
             <Nav.Link as={Link} to="/#nyheter" id="nav-link">
               Nyheter
             </Nav.Link>
-            <Nav.Link as={Link} to="#produkter">
+            <Nav.Link as={Link} to="/#produkter">
               Produkter
             </Nav.Link>
-            <Nav.Link as={Link} to="#kontakt">
+            <Nav.Link as={Link} to="/#kontakt">
               Kontakt
             </Nav.Link>
           </Nav>
         </Col>
         <Col></Col>
-
-        </Row>
       </Navbar>
     </Container>
   );

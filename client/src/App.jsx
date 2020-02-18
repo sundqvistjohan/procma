@@ -7,13 +7,9 @@ import { Container, Row } from "react-bootstrap";
 const App = () => {
   return (
     <>
-      <Container fluid id="nav-carousel">
-        <Row>
-          <Navigation />
-          <ImageSlider />
-          <News />
-        </Row>
-      </Container>
+      <Navigation />
+      <ImageSlider />
+      <News />
     </>
   );
 };

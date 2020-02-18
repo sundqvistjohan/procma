@@ -20,7 +20,6 @@ const News = () => {
 
   if (newsItems && newsItems.length > 0) {
     newsItemList = newsItems.map(newsItem => {
-      debugger;
       return (
         <>
           <h4>{newsItem.date}</h4>
@@ -32,7 +31,7 @@ const News = () => {
   }
 
   return (
-    <Container id="news">
+    <Container id="nyheter">
       <Row>
         <h1>Nyheter</h1>
         <div>{newsItemList}</div>
