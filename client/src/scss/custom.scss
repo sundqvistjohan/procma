@@ -19,7 +19,7 @@
 }
 
 .carousel { 
-  position: absolute;
+  // position: absolute;
   top: 0;
   width: 100%;
 }
@@ -45,6 +45,35 @@
 #nyheter {
   padding-top: 60px;
   top: 660px;
-  position: absolute;
   margin-left: 100px;
+}
+
+#produkter {
+  padding-top: 60px;
+}
+
+#product-header {
+  text-align: center;
+}
+
+#produkt1 {
+  background-color: #236BAB;
+  color: white;
+  padding: 30px;
+}
+
+#produkt2 {
+  background-color: mediumseagreen;
+  color: white;
+  padding: 30px;
+}
+
+#produkt3 {
+  background-color: darkslategray;
+  color: white;
+  padding: 30px;
+}
+
+ul {
+  list-style-type: none;
 }

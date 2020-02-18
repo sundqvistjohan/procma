@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "./components/Navigation";
 import ImageSlider from "./components/ImageSlider";
 import News from "./components/News";
-import { Container, Row } from "react-bootstrap";
+import Products from "./components/Products"
 
 const App = () => {
   return (
@@ -10,6 +10,7 @@ const App = () => {
       <Navigation />
       <ImageSlider />
       <News />
+      <Products />
     </>
   );
 };
