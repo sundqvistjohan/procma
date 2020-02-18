@@ -13,10 +13,6 @@
   height: 40px;
 }
 
-.container-fluid{
-  padding: 0;
-}
-
 .navbar-light .navbar-nav .nav-link {
   color: black;
   padding-right: 40px;
@@ -28,10 +24,10 @@
 .carousel { 
   position: absolute;
   top: 0;
+  width: 100%;
 }
 .carousel-item {
-  height: 60vh;
-  width: 100vw;
+  height: 660px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,7 +35,7 @@
 
 #carousel-cards {
   position: absolute;
-  top: 40vh;
+  top: 400px;
   z-index: 10;
 }
 
@@ -47,4 +43,9 @@
   background-color: rgba(255, 255, 255, 0.8);
   margin: 30px;
   padding: 15px;
+}
+
+#news {
+  top: 660px;
+  position: absolute;
 }
