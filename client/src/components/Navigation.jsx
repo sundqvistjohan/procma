@@ -7,7 +7,6 @@ const Navigation = () => {
   return (
     <Container fluid id="nav">
       <Navbar>
-        <Row>
         <Col>
           <Navbar.Brand href="#">
             <img src={ProcmaLogo} alt="logo" id="logo" />
@@ -27,8 +26,6 @@ const Navigation = () => {
           </Nav>
         </Col>
         <Col></Col>
-
-        </Row>
       </Navbar>
     </Container>
   );
