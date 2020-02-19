@@ -24,7 +24,7 @@ const Products = () => {
           <div style={{ paddingTop: "20px" }}>PRODUKTBROSCHYR?!</div>
         </Col>
         <Col id="produkt2">
-          <h3>EVOCLEAN</h3>
+          <h3 id="product-header">EVOCLEAN</h3>
           <div>
             Vi erbjuder moduluppbyggda Evoclean™ Ballast, slam och vatten
             separeras och processvattnet återcirkuleras i anläggningen. Att
@@ -40,7 +40,7 @@ const Products = () => {
           <div style={{ paddingTop: "20px" }}>PRODUKTBROSCHYR?!</div>
         </Col>
         <Col id="produkt3">
-          <h3>TEKNISKA KONSULTTJÄNSTER</h3>
+          <h3 id="product-header">TEKNISKA KONSULTTJÄNSTER</h3>
           Vi har hög kompetens och mycket lång erfarenhet inom de områden vi
           verkar. Våra tekniska konsulttjänster finns inom:
           <ul>

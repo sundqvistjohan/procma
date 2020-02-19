@@ -1,4 +1,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans'
+}
 
 #nav {
   position: fixed;
@@ -21,7 +26,7 @@
 .carousel { 
   // position: absolute;
   top: 0;
-  width: 100%;
+  // width: 100%;
 }
 .carousel-item {
   height: 660px;
@@ -74,6 +79,21 @@
   padding: 30px;
 }
 
+#kontakt {
+  padding: 30px;
+}
+
+#contact-card {
+  padding-left: 50px;
+  line-height: 1.3;
+}
+
+#contact-header {
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+
 ul {
   list-style-type: none;
+  padding-left: 0;
 }

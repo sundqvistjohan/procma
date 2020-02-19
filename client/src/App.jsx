@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation";
 import ImageSlider from "./components/ImageSlider";
 import News from "./components/News";
 import Products from "./components/Products"
+import Contact from "./components/Contact"
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <ImageSlider />
       <News />
       <Products />
+      <Contact />
     </>
   );
 };
