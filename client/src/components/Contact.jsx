@@ -3,6 +3,7 @@ import { Container, Col, Image, Row } from "react-bootstrap";
 import Patrik from "../img/Patrik.jpg";
 import Erik from "../img/Erik.jpg";
 import ProcmaLogo from "../img/PROCMA-logo.png";
+import AutodeskPartner from "../img/autodesk.png";
 
 const Contact = () => {
   return (
@@ -13,7 +14,7 @@ const Contact = () => {
         svarar vi efter bästa förmåga.
       </div>
       <Row>
-        <Col id="contact-card" style={{ left: "26%" }}>
+        <Col id="contact-card" style={{ left: "30%" }}>
           <Image
             src={ProcmaLogo}
             style={{ height: "30px", marginTop: "50px", marginBottom: "30px" }}
@@ -24,9 +25,9 @@ const Contact = () => {
             <li>791 61 Falun</li>
           </ul>
         </Col>
-        <Col style={{ left: "3%" }}>
+        <Col style={{ left: "5%" }}>
           <Row>
-            <Col id="contact-card" md="auto" >
+            <Col id="contact-card" md="auto">
               <Image src={Patrik} />
               <h5 id="contact-header">PATRIK SVEDER</h5>
               <ul>
@@ -49,6 +50,14 @@ const Contact = () => {
               </a>
             </Col>
           </Row>
+        </Col>
+      </Row>
+      <Row style={{ textAlign: "center" }}>
+        <Col>
+          <Image
+            src={AutodeskPartner}
+            style={{ height: "80px", marginTop: "20px", marginBottom: "20px", paddingLeft: "80px" }}
+          />
         </Col>
       </Row>
     </Container>

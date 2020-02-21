@@ -13,8 +13,8 @@ const Navigation = () => {
           </Navbar.Brand>
         </Col>
         <Col>
-          <Nav className="mr-auto">
-            <Nav.Link as={Link} to="/#nyheter" id="nav-link">
+          <Nav>
+            <Nav.Link as={Link} to="/#nyheter">
               Nyheter
             </Nav.Link>
             <Nav.Link as={Link} to="/#produkter">
