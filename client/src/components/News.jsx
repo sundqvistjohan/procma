@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Row } from "react-bootstrap";
+import { Container, Card, Accordion, Button } from "react-bootstrap";
 
 const News = () => {
   let newsItemList;
@@ -19,12 +19,20 @@ const News = () => {
   useEffect(() => {}, [newsItems]);
 
   if (newsItems && newsItems.length > 0) {
-    newsItemList = newsItems.map(newsItem => {
+    newsItemList = newsItems.map((newsItem, index) => {
       return (
         <>
-          <h4>{newsItem.date}</h4>
-          <h3>{newsItem.title}</h3>
-          <div>{newsItem.body}</div>
+          <Card key={index}>
+            <Card.Header id="accordion-card-header">
+              <Accordion.Toggle as={Button} variant="link" eventKey={index} id="news-header">
+                <h6>{newsItem.date}</h6>
+                <h5>{newsItem.title}</h5>
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey={index}>
+              <Card.Body>{newsItem.body}</Card.Body>
+            </Accordion.Collapse>
+          </Card>
         </>
       );
     });
@@ -32,10 +40,8 @@ const News = () => {
 
   return (
     <Container id="nyheter">
-      <Row>
-        <h1>Nyheter</h1>
-        <div>{newsItemList}</div>
-      </Row>
+      <h1>Nyheter</h1>
+      <Accordion defaultActiveKey="0">{newsItemList}</Accordion>
     </Container>
   );
 };

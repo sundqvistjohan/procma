@@ -55,6 +55,20 @@ body {
   margin-left: 100px;
 }
 
+.card {
+  border: none;
+}
+
+#accordion-card-header {
+  background-color: white;
+  padding-left: 0;
+  border: none;
+}
+
+#news-header {
+  text-align: left;
+}
+
 #produkter {
   padding-top: 60px;
 }

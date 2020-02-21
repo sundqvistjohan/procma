@@ -1,7 +1,5 @@
 import React from "react";
-import { Container, Col, Nav, Navbar, Row } from "react-bootstrap";
-import ProcmaLogo from "../img/PROCMA-logo.png";
-import { HashLink as Link } from "react-router-hash-link";
+import { Container, Col, Row } from "react-bootstrap";
 
 const Products = () => {
   return (
