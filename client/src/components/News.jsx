@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Card, Accordion, Button } from "react-bootstrap";
+import { Container, Card, Button, Row, Col } from "react-bootstrap";
 
 const News = () => {
   let newsItemList;
+  let bodyText;
+
   const [newsItems, setNewsItems] = useState([]);
+  const [currentNewsIndex, setCurrentNewsIndex] = useState("");
+  const [currentNews, setCurrentNews] = useState("");
+
 
   const getNews = () => {
     axios.get("nyheter.json").then(response => {
@@ -16,46 +21,57 @@ const News = () => {
     getNews();
   }, []);
 
-  useEffect(() => {}, [newsItems]);
+  useEffect(() => {
+    renderNewsItem(currentNewsIndex)
+  }, [newsItems]);
+
+  useEffect(() => {
+    renderNewsItem(currentNewsIndex)
+  }, [currentNewsIndex]);
+
+  useEffect(() => {
+  }, [currentNews]);
 
   if (newsItems && newsItems.length > 0) {
-    newsItemList = newsItems.map((newsItem, index) => {
-      let bodyText = newsItem.body.map(bodyParagraph => {
-        return (
-          <>
-            <div>{bodyParagraph}</div>
-            <br></br>
-          </>
-        );
-      });
-      debugger;
+    newsItemList = newsItems.map((newsItem, itemIndex) => {
       return (
         <>
-          <Card key={index}>
-            <Card.Header id="accordion-card-header">
-              <Accordion.Toggle
-                as={Button}
-                variant="link"
-                eventKey={index}
-                id="news-header"
-              >
-                <h6>{newsItem.date}</h6>
-                <h5>{newsItem.title}</h5>
-              </Accordion.Toggle>
-            </Card.Header>
-            <Accordion.Collapse eventKey={index}>
-              <Card.Body>{bodyText}</Card.Body>
-            </Accordion.Collapse>
-          </Card>
+          <div
+            key={itemIndex}
+            id="accordion-card-header"
+            onClick={() => setCurrentNewsIndex(itemIndex)}
+          >
+            <h6>{newsItem.date}</h6>
+            <h5>{newsItem.title}</h5>
+          </div>
         </>
       );
     });
   }
 
+  const renderNewsItem = currentNewsIndex => {
+    if (newsItems && newsItems.length > 0) {
+      bodyText = newsItems[currentNewsIndex || 0].body.map(
+        bodyParagraph => {
+          return (
+            <>
+              <div>{bodyParagraph}</div>
+              <br></br>
+            </>
+          );
+        }
+      );
+    }
+    setCurrentNews(bodyText)
+  }
+
   return (
     <Container id="nyheter">
       <h1>Nyheter</h1>
-      <Accordion defaultActiveKey="0">{newsItemList}</Accordion>
+      <Row>
+        <Col md={4}>{newsItemList}</Col>
+        <Col>{currentNews}</Col>
+      </Row>
     </Container>
   );
 };
