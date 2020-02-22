@@ -20,17 +20,31 @@ const News = () => {
 
   if (newsItems && newsItems.length > 0) {
     newsItemList = newsItems.map((newsItem, index) => {
+      let bodyText = newsItem.body.map(bodyParagraph => {
+        return (
+          <>
+            <div>{bodyParagraph}</div>
+            <br></br>
+          </>
+        );
+      });
+      debugger;
       return (
         <>
           <Card key={index}>
             <Card.Header id="accordion-card-header">
-              <Accordion.Toggle as={Button} variant="link" eventKey={index} id="news-header">
+              <Accordion.Toggle
+                as={Button}
+                variant="link"
+                eventKey={index}
+                id="news-header"
+              >
                 <h6>{newsItem.date}</h6>
                 <h5>{newsItem.title}</h5>
               </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey={index}>
-              <Card.Body>{newsItem.body}</Card.Body>
+              <Card.Body>{bodyText}</Card.Body>
             </Accordion.Collapse>
           </Card>
         </>
