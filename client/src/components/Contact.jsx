@@ -7,14 +7,14 @@ import AutodeskPartner from "../img/autodesk.png";
 
 const Contact = () => {
   return (
-    <Container fluid id="kontakt">
+    <Container id="kontakt">
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <h1>KONTAKTA OSS</h1>
         Vare sig det gäller mer information eller konkreta förfrågningar så
         svarar vi efter bästa förmåga.
       </div>
       <Row>
-        <Col id="contact-card" style={{ left: "30%" }}>
+        <Col id="contact-card" style={{ left: "20%" }}>
           <Image
             src={ProcmaLogo}
             style={{ height: "30px", marginTop: "50px", marginBottom: "30px" }}
@@ -56,7 +56,7 @@ const Contact = () => {
         <Col>
           <Image
             src={AutodeskPartner}
-            style={{ height: "80px", marginTop: "20px", marginBottom: "20px", paddingLeft: "80px" }}
+            style={{ height: "80px", marginTop: "20px", marginBottom: "20px" }}
           />
         </Col>
       </Row>
