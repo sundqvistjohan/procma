@@ -7,9 +7,8 @@ const News = () => {
   let bodyText;
 
   const [newsItems, setNewsItems] = useState([]);
-  const [currentNewsIndex, setCurrentNewsIndex] = useState("");
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
   const [currentNews, setCurrentNews] = useState("");
-
 
   const getNews = () => {
     axios.get("nyheter.json").then(response => {
@@ -22,15 +21,14 @@ const News = () => {
   }, []);
 
   useEffect(() => {
-    renderNewsItem(currentNewsIndex)
+    renderNewsItem(currentNewsIndex);
   }, [newsItems]);
 
   useEffect(() => {
-    renderNewsItem(currentNewsIndex)
+    renderNewsItem(currentNewsIndex);
   }, [currentNewsIndex]);
 
-  useEffect(() => {
-  }, [currentNews]);
+  useEffect(() => {}, [currentNews]);
 
   if (newsItems && newsItems.length > 0) {
     newsItemList = newsItems.map((newsItem, itemIndex) => {
@@ -38,7 +36,11 @@ const News = () => {
         <>
           <div
             key={itemIndex}
-            id="accordion-card-header"
+            id="news-header"
+            style={{
+              backgroundColor:
+                itemIndex === currentNewsIndex ? "#8fe3ff" : "white"
+            }}
             onClick={() => setCurrentNewsIndex(itemIndex)}
           >
             <h6>{newsItem.date}</h6>
@@ -51,26 +53,24 @@ const News = () => {
 
   const renderNewsItem = currentNewsIndex => {
     if (newsItems && newsItems.length > 0) {
-      bodyText = newsItems[currentNewsIndex || 0].body.map(
-        bodyParagraph => {
-          return (
-            <>
-              <div>{bodyParagraph}</div>
-              <br></br>
-            </>
-          );
-        }
-      );
+      bodyText = newsItems[currentNewsIndex || 0].body.map(bodyParagraph => {
+        return (
+          <>
+            <div>{bodyParagraph}</div>
+            <br></br>
+          </>
+        );
+      });
     }
-    setCurrentNews(bodyText)
-  }
+    setCurrentNews(bodyText);
+  };
 
   return (
-    <Container id="nyheter">
+    <Container fluid id="nyheter">
       <h1>Nyheter</h1>
       <Row>
         <Col md={4}>{newsItemList}</Col>
-        <Col>{currentNews}</Col>
+        <Col style={{ backgroundColor: "#8fe3ff" }}>{currentNews}</Col>
       </Row>
     </Container>
   );

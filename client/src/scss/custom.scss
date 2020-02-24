@@ -52,21 +52,16 @@ body {
 #nyheter {
   padding-top: 60px;
   top: 660px;
-  margin-left: 100px;
-}
-
-.card {
-  border: none;
-}
-
-#accordion-card-header {
-  // background-color: white;
-  padding-left: 0;
-  border: none;
+  padding-left: 50px;
 }
 
 #news-header {
   text-align: left;
+  padding: 10px;
+}
+
+.col-md-4 {
+  padding: 0
 }
 
 #produkter {
