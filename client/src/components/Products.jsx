@@ -1,9 +1,12 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
+import elips from "../img/elips.jpg";
 
 const Products = () => {
   return (
     <Container fluid id="produkter">
+      <h1 style={{ textAlign: "center" }}>PRODUKTER</h1>
+
       <Row>
         <Col id="produkt1">
           <h3 id="product-header">TVÄTTLANSEN</h3>
@@ -54,6 +57,7 @@ const Products = () => {
           <div style={{ paddingTop: "20px" }}>PRODUKTBROSCHYR?!</div>
         </Col>
       </Row>
+      <img src={elips} style={{ height: "600px" }} />
     </Container>
   );
 };

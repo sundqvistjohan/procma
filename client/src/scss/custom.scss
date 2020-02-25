@@ -1,8 +1,10 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 body {
-  font-family: 'Open Sans'
+  font-family: "Open Sans";
+  font-size: 14px;
+  background: whitesmoke;
 }
 
 #nav {
@@ -20,48 +22,38 @@ body {
   color: black;
   text-align: center;
   width: 100%;
-
 }
 .navbar-light .navbar-nav .nav-link:hover {
   color: white;
 }
 
-.carousel { 
-  top: 0;
-}
-
-.carousel-item {
-  height: 660px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#carousel-cards {
-  position: absolute;
-  top: 400px;
-  z-index: 10;
-}
-
-#carousel-card {
-  background-color: rgba(255, 255, 255, 0.8);
-  margin: 30px;
-  padding: 15px;
-}
-
 #nyheter {
-  padding-top: 60px;
-  top: 660px;
-  padding-left: 50px;
+  padding-top: 80px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#news-card {
+  margin: 25px;
+  background-attachment: fixed;
+  background: white;
 }
 
 #news-header {
   text-align: left;
-  padding: 10px;
+  padding: 30px;
+}
+
+#news-paragraph {
+  padding-top: 10px;
+}
+
+#news-image {
+  width: 100%;
 }
 
 .col-md-4 {
-  padding: 0
+  padding: 0;
 }
 
 #produkter {
@@ -73,7 +65,7 @@ body {
 }
 
 #produkt1 {
-  background-color: #236BAB;
+  background-color: #236bab;
   color: white;
   padding: 30px;
 }
@@ -92,6 +84,7 @@ body {
 
 #kontakt {
   padding: 30px;
+  background: white;
 }
 
 #contact-card {
