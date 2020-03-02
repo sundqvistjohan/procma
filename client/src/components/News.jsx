@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Table } from "react-bootstrap";
 
 const News = () => {
   let newsItemList;
@@ -21,30 +21,26 @@ const News = () => {
     newsItemList = newsItems.map((newsItem, itemIndex) => {
       const bodyTextTruncated = newsItem.body[0].substring(0, 300);
       return (
-        <Row id="news-card">
-          <Col md={4} id="news-image-container">
-            <img src={newsItem.img} id="news-image" />
-          </Col>
-          <Col>
+        <tr id="news-card">
+          <td id="news-image-container">
+            <img src={newsItem.img} id="news-image" width="100%" />
+          </td>
+          <td>
             <div key={itemIndex} id="news-header">
               <i>{newsItem.date}</i>
               <h5>{newsItem.title}</h5>
               <div>{bodyTextTruncated}...</div>
             </div>
-          </Col>
-        </Row>
+          </td>
+        </tr>
       );
     });
   }
 
   return (
     <Container fluid id="nyheter">
-      <Row>
-        <Col>
-          <h1 style={{ textAlign: "center" }}>NYHETER</h1>
-        </Col>
-      </Row>
-      {newsItemList}
+      <h1 style={{ textAlign: "center" }}>NYHETER</h1>
+      <Table borderless>{newsItemList}</Table>
     </Container>
   );
 };

@@ -29,31 +29,30 @@ body {
 
 #nyheter {
   padding-top: 80px;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-#news-card {
-  margin: 25px;
-  background-attachment: fixed;
-  background: white;
-}
-
-#news-header {
-  text-align: left;
-  padding: 30px;
-}
-
-#news-paragraph {
-  padding-top: 10px;
-}
-
-#news-image {
+  padding-left: 5%;
+  padding-right: 5%;
   width: 100%;
 }
 
-.col-md-4 {
+.table {
+  border-collapse: separate;
+  border-spacing: 0 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#news-card {
+  background: white;
+}
+
+#news-image-container {
+  width: 250px;
   padding: 0;
+}
+
+#news-image {
+  object-fit: cover;
+  object-position: center;
 }
 
 #produkter {
