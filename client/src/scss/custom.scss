@@ -4,7 +4,6 @@
 body {
   font-family: "Open Sans";
   font-size: 14px;
-  background: whitesmoke;
 }
 
 #nav {
@@ -27,11 +26,16 @@ body {
   color: white;
 }
 
+.video {
+  background-color: black;
+}
 #nyheter {
   padding-top: 80px;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 50px;
   width: 100%;
+  background-color: whitesmoke;
 }
 
 .table {
@@ -50,15 +54,15 @@ body {
   padding: 0;
 }
 
-#news-image {
-  object-fit: cover;
-  object-position: center;
-}
-
 #produkter {
-  padding-top: 60px;
+  padding-top: 80px;
+  width: 100%;
 }
 
+#elips {
+  display: block;
+  margin: 0 auto auto;
+}
 #product-header {
   text-align: center;
 }
