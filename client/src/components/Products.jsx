@@ -7,7 +7,7 @@ const Products = () => {
   return (
     <>
       <Container id="produkter">
-        <h1 style={{ textAlign: "center" }}>PRODUKTER</h1>
+        <h1 id="section-header">PRODUKTER</h1>
         <Row>
           På PROCMA AB arbetar vi med industriell utveckling av produkter och
           processer som minskar miljöpåverkan men ökar affärsnyttan. Våra kunder

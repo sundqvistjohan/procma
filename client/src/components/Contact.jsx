@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <Container id="kontakt">
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
-        <h1>KONTAKTA OSS</h1>
+        <h1 id="section-header">KONTAKTA OSS</h1>
         Vare sig det gäller mer information eller konkreta förfrågningar så
         svarar vi efter bästa förmåga.
       </div>

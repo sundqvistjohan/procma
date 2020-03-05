@@ -39,7 +39,7 @@ const News = () => {
 
   return (
     <Container fluid id="nyheter">
-      <h1 style={{ textAlign: "center" }}>NYHETER</h1>
+      <h1 id="section-header">NYHETER</h1>
       <Table borderless>{newsItemList}</Table>
     </Container>
   );
