@@ -30,15 +30,11 @@ const Contact = () => {
             <Col id="contact-card" md="auto">
               <Image src={Patrik} />
               <h5 id="contact-header">PATRIK SVEDER</h5>
-              <ul>
-                <li>Försäljning och Marknad</li>
-                <li>070-677 88 49</li>
-                <li>
-                  <a href="mailto:patrik.sveder@procma.se">
-                    patrik.sveder@procma.se
-                  </a>
-                </li>
-              </ul>
+              <div>Försäljning och Marknad</div>
+              <div>070-677 88 49</div>
+              <a href="mailto:patrik.sveder@procma.se">
+                patrik.sveder@procma.se
+              </a>
             </Col>
             <Col id="contact-card">
               <Image src={Erik} />

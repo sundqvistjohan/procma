@@ -32,7 +32,7 @@ body {
 
 #section-header {
   text-decoration: underline;
-  text-decoration-color: #49D3FF;
+  text-decoration-color: #49d3ff;
   text-underline-position: under;
   text-align: center;
   padding-bottom: 10px;
@@ -71,26 +71,20 @@ body {
   text-align: center;
 }
 
-#produkt1 {
-  background-color: #1E629F;
-  color: white;
-  padding: 30px;
+#product-cards {
+  max-width: 90%;
 }
 
-#produkt2 {
-  background-color: #15A66F;
-  color: white;
-  padding: 30px;
+#product-right {
+  background-color: whitesmoke;
+  padding: 25px;
+  margin: 20px;
 }
 
-#produkt3 {
-  background-color: #E5E8E8 ;
-  // color: white;
-  padding: 30px;
-}
-
-#bold {
-  font-weight: bold;
+#product-left {
+  background-color: whitesmoke;
+  padding: 25px;
+  margin: 20px 0 0;
 }
 
 #kontakt {
@@ -109,4 +103,5 @@ body {
 
 ul {
   list-style-type: square;
+  padding-top: 20px;
 }

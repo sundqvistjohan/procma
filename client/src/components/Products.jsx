@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import elips from "../img/elips.jpg";
 import evoclean from "../img/evoclean.png";
+import tvattlans from "../img/tvattlans.png";
+import pdf from "../img/pdf.png";
 
 const Products = () => {
   return (
@@ -21,9 +23,9 @@ const Products = () => {
           id="elips"
         /> */}
       </Container>
-      <Container fluid id="product-cards">
+      <Container id="product-cards">
         <Row>
-          <Col sm={8} id="produkt1">
+          <Col id="product-right">
             <h3 id="product-header">EVOCLEAN™</h3>
             <div>
               Vi erbjuder moduluppbyggda Evoclean™. En komplett miljöanläggning
@@ -64,42 +66,97 @@ const Products = () => {
                 övervakning av enskilda moduler och av hela miljöanläggningen.
               </li>
             </ul>
-            <div style={{ paddingTop: "20px" }}>PRODUKTBROSCHYR?!</div>
+            <img src={evoclean} width="100%" style={{padding: "20px"}} />
+            <div style={{ paddingTop: "20px" }}>
+              <a
+                href="/content/Broschyr_Evoclean_tvattanlaggning-v1.pdf"
+                id="product-link"
+              >
+                <img src={pdf} width="42px" style={{ paddingRight: "10px" }} />
+                EVOCLEAN™ MILJÖANLÄGGNING
+              </a>
+            </div>
           </Col>
-          <Col sm={4} id="produkt2">
-            <h3 id="product-header">EVOCLEAN™ TVÄTTLANS</h3>
-            En världsunik tvättrobot som utför en grundlig tvätt av betongbil på
-            två minuter.
-            <ul>
-              <li>Låg ställtid</li>
-              <li>Bättre arbetsmiljö</li>
-              <li>Återcirkulerar restprodukter</li>
-              <li>Modulärt och skalerbart</li>
-              <li>Robust teknik</li>
-              <li>Kvalitetssäkrad automatik</li>
-              <li>Kan fjärrövervakas över krypterad kanal</li>
-              <li>CE-märkt med nationella och europeiska säkerhetskrav</li>
-            </ul>
-            <div style={{ paddingTop: "20px" }}>PRODUKTBROSCHYR?!</div>
-            <img src={evoclean} width="100%" />
-          </Col>
-        </Row>
-        <Row id="produkt3">
-          <Col sm={{ span: 6, offset: 3 }} >
-            <h3 id="product-header">TEKNISKA KONSULTTJÄNSTER</h3>
-            Vi har hög kompetens och mycket lång erfarenhet inom de områden vi
-            verkar. Våra tekniska konsulttjänster finns inom:
-            <ul>
-              <li>Analys och förstudier</li>
-              <li>Projektledning</li>
-              <li>El och automation</li>
-              <li>Industriell IT</li>
-              <li>Mekanik</li>
-              <li>Miljöteknik</li>
-              <li>Maskinsäkerhet och certifiering</li>
-              <li>Teknisk dokumentation</li>
-            </ul>
-            <div style={{ paddingTop: "20px" }}>PRODUKTBROSCHYR?!</div>
+          <Col>
+            <Row>
+              <Col id="product-left">
+                <h3 id="product-header">EVOCLEAN™ TVÄTTLANS</h3>
+                <div>
+                  En världsunik tvättrobot som utför en grundlig tvätt av
+                  betongbil på två minuter.
+                </div>
+                <ul>
+                  <Row>
+                    <Col>
+                      <li>Låg ställtid</li>
+                      <li>Bättre arbetsmiljö</li>
+                      <li>Återcirkulerar restprodukter</li>
+                      <li>Modulärt och skalerbart</li>
+                      <li>Robust teknik</li>
+                    </Col>
+                    <Col>
+                      <li>Kvalitetssäkrad automatik</li>
+                      <li>Kan fjärrövervakas över krypterad kanal</li>
+                      <li>
+                        CE-märkt med nationella och europeiska säkerhetskrav
+                      </li>
+                    </Col>
+                  </Row>
+                </ul>
+                <img src={tvattlans} width="100%" style={{padding: "20px"}} />
+                <div style={{ paddingTop: "20px", paddingBottom: "20px" }}>
+                  <a
+                    href="/content/Broschyr_Evoclean_tvattlans-v1.pdf"
+                    id="product-link"
+                  >
+                    <img
+                      src={pdf}
+                      width="42px"
+                      style={{ paddingRight: "10px" }}
+                    />
+                    EVOCLEAN™ TVÄTTLANS
+                  </a>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col id="product-left">
+                <h3 id="product-header">TEKNISKA KONSULTTJÄNSTER</h3>
+                <div>
+                  Vi har hög kompetens och mycket lång erfarenhet inom de
+                  områden vi verkar. Våra tekniska konsulttjänster finns inom:
+                </div>
+                <ul>
+                  <Row>
+                    <Col>
+                      <li>Analys och förstudier</li>
+                      <li>Projektledning</li>
+                      <li>El och automation</li>
+                      <li>Industriell IT</li>
+                    </Col>
+                    <Col>
+                      <li>Mekanik</li>
+                      <li>Miljöteknik</li>
+                      <li>Maskinsäkerhet och certifiering</li>
+                      <li>Teknisk dokumentation</li>
+                    </Col>
+                  </Row>
+                </ul>
+                <div style={{ paddingTop: "20px" }}>
+                  <a
+                    href="/content/Broschyr_Om_Procma_AB-v1.pdf"
+                    id="product-link"
+                  >
+                    <img
+                      src={pdf}
+                      width="42px"
+                      style={{ paddingRight: "10px" }}
+                    />
+                    TEKNISKA KONSULTTJÄNSTER
+                  </a>
+                </div>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </Container>
