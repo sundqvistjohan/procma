@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Row, Col, Table } from "react-bootstrap";
+import { Container, Button, Table } from "react-bootstrap";
+import { ArrowUpShort, ArrowDownShort } from "react-bootstrap-icons";
 
 const News = () => {
   let newsItemList;
@@ -22,13 +23,14 @@ const News = () => {
   useEffect(() => {}, [expandedNewsItem]);
 
   const onClickHandler = event => {
-    setExpandedNewsItem(event.target.id);
+    event.currentTarget.id === expandedNewsItem
+      ? setExpandedNewsItem(null)
+      : setExpandedNewsItem(event.currentTarget.id);
     debugger;
   };
 
   if (newsItems && newsItems.length > 0) {
     newsItemList = newsItems.map((newsItem, itemIndex) => {
-      debugger;
       if (itemIndex === parseInt(expandedNewsItem)) {
         bodyText = newsItem.body.map(bodyParagraph => {
           return (
@@ -42,18 +44,25 @@ const News = () => {
         bodyText = newsItem.body[0].substring(0, 300) + "...";
       }
       return (
-        <tr id="news-card">
+        <tr class="news-card" id={itemIndex} onClick={onClickHandler}>
           <td id="news-image-container">
             <img src={newsItem.img} id="news-image" width="100%" />
           </td>
           <td>
-            <div key={itemIndex} id="news-header">
+            <div key={itemIndex} id="news-header" id={itemIndex}>
               <i>{newsItem.date}</i>
               <h5>{newsItem.title}</h5>
               <div>{bodyText}</div>
-              <button id={itemIndex} onClick={onClickHandler}>
-                Expand
-              </button>
+              {itemIndex === parseInt(expandedNewsItem) ?
+              <img src={newsItem.img} id="news-image" width="100%" /> : null }
+
+              <Button variant="link" block>
+                {itemIndex === parseInt(expandedNewsItem) ? (
+                  <ArrowUpShort size={42} />
+                ) : (
+                  <ArrowDownShort size={42} />
+                )}
+              </Button>
             </div>
           </td>
         </tr>

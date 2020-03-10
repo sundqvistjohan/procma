@@ -53,7 +53,7 @@ body {
   margin: 0 auto;
 }
 
-#news-card {
+.news-card {
   background: white;
 }
 
@@ -104,4 +104,8 @@ body {
 ul {
   list-style-type: square;
   padding-top: 20px;
+}
+
+svg {
+  pointer-events: none;
 }
