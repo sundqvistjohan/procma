@@ -26,7 +26,6 @@ const News = () => {
     event.currentTarget.id === expandedNewsItem
       ? setExpandedNewsItem(null)
       : setExpandedNewsItem(event.currentTarget.id);
-    debugger;
   };
 
   if (newsItems && newsItems.length > 0) {
@@ -45,26 +44,36 @@ const News = () => {
       }
       return (
         <tr class="news-card" id={itemIndex} onClick={onClickHandler}>
-          <td id="news-image-container">
-            <img src={newsItem.img} id="news-image" width="100%" />
-          </td>
-          <td>
-            <div key={itemIndex} id="news-header" id={itemIndex}>
-              <i>{newsItem.date}</i>
-              <h5>{newsItem.title}</h5>
-              <div>{bodyText}</div>
-              {itemIndex === parseInt(expandedNewsItem) ?
-              <img src={newsItem.img} id="news-image" width="100%" /> : null }
-
-              <Button variant="link" block>
-                {itemIndex === parseInt(expandedNewsItem) ? (
+          {itemIndex === parseInt(expandedNewsItem) ? null : (
+            <>
+              <td id="news-image-container" style={{ backgroundImage: `url(${newsItem.img})`}} />
+            </>
+          )}
+          {itemIndex === parseInt(expandedNewsItem) ? (
+            <td colspan="2" style={{ padding: "2% 10% 2% 10%" }}>
+              <div key={itemIndex} id={itemIndex}>
+                <i>{newsItem.date}</i>
+                <h5>{newsItem.title}</h5>
+                <div style={{ padding: "2%" }}>{bodyText}
+                <img src={newsItem.img} id="news-image-full" />
+                </div>
+                <Button variant="link" block style={{ paddingBottom: "0" }}>
                   <ArrowUpShort size={42} />
-                ) : (
+                </Button>
+              </div>
+            </td>
+          ) : (
+            <td style={{ padding: "20px 20px 0 30px" }}>
+              <div key={itemIndex} id={itemIndex}>
+                <span>{newsItem.date}</span>
+                <h5>{newsItem.title}</h5>
+                <div>{bodyText}</div>
+                <Button variant="link" block>
                   <ArrowDownShort size={42} />
-                )}
-              </Button>
-            </div>
-          </td>
+                </Button>
+              </div>
+            </td>
+          )}
         </tr>
       );
     });
